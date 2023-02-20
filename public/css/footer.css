@@ -1,0 +1,93 @@
+footer {
+	background-color: #0B2239;
+	border-top: 5px solid #34BD6B;
+	margin-top: 80px;
+}
+
+.contactContainer {
+	margin-top: 40px;
+	padding-bottom: 40px;
+	box-sizing: content-box;
+	display: flex;
+}
+
+.itemContact {
+	display: flex;
+	align-items: center;
+	color: #ffffff;
+	background-color: #162d44;
+	padding: 10px 30px;
+	width: 33.3%;
+}
+
+.itemContact:not(:last-child) {
+	margin-right: 16px;
+}
+
+.itemContact>img {
+	width: 50px;
+	height: 50px;
+}
+
+.itemContactInfos {
+	display: flex;
+	flex-direction: column;
+	margin-left: 16px;
+}
+
+.itemContactInfos span:nth-child(1) {
+	font-size: 18px;
+}
+
+.itemContactInfos span:nth-child(2) {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+#footerText {
+	border-top: 1px solid #626262;
+	text-align: center;
+	color: #a5a3a3;
+	padding: 16px 0;
+}
+
+#whatsapp {
+	position: fixed;
+	bottom: 16px;
+	right: 16px;
+	cursor: pointer;
+}
+
+/* Medias */
+@media screen and (max-width: 1255px) {
+	.itemContactInfos span:nth-child(2) {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	.contactContainer {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px;
+	}
+
+	.itemContact {
+		width: 40%;
+	}
+
+	.itemContact:not(:last-child) {
+		margin-right: unset;
+	}
+}
+
+@media screen and (max-width: 879px) {
+	.contactContainer {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.itemContact {
+		width: 100%;
+	}
+}

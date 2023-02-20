@@ -1,0 +1,15 @@
+body {
+	position: relative;
+}
+
+.containerWebsite {
+	max-width: 1292px;
+	margin: 0 auto;
+	padding: 193px 20px 0 20px;
+}
+
+.containetSections {
+	max-width: 1292px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
