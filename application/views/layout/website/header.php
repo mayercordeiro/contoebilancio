@@ -15,23 +15,6 @@
 			<link href="<?php echo base_url('public/' . $style); ?>" rel="stylesheet">
 		<?php endforeach; ?>
 	<?php endif; ?>
-
-	<!-- Tailwind CSS -->
-	<script src="https://cdn.tailwindcss.com"></script>
-	<script>
-		tailwind.config = {
-			theme: {
-				extend: {
-					colors: {
-						'primary-color-site': '#34BD6B',
-					},
-				},
-			},
-		}
-	</script>
-
-	<!-- Header Scroll -->
-
 </head>
 
 <body>
@@ -62,17 +45,65 @@
 				<li>
 					<a href="">Home</a>
 				</li>
-				<li class="expandMobile">
+				<li>
 					<a href="/codeigniter/sobrenos">Sobre Nós</a>
 				</li>
 				<li class="expandMobile">
 					<a>Serviços</a>
+					<div class="btnExpand">
+						<span class="btnHorizontal"></span>
+						<span class="btnVertical"></span>
+					</div>
+					<ul class="submenuMobile">
+						<li>
+							<a>Item 1</a>
+						</li>
+						<li>
+							<a>Item 2</a>
+						</li>
+						<li>
+							<a>Item 3</a>
+						</li>
+						<li>
+							<a>Item 4</a>
+						</li>
+					</ul>
 				</li>
 				<li class="expandMobile">
 					<a>Utilitários</a>
+					<div class="btnExpand">
+						<span class="btnHorizontal"></span>
+						<span class="btnVertical"></span>
+					</div>
+					<ul class="submenuMobile">
+						<li>
+							<a>Item 1</a>
+						</li>
+						<li>
+							<a>Item 2</a>
+						</li>
+						<li>
+							<a>Item 3</a>
+						</li>
+					</ul>
 				</li>
 				<li class="expandMobile">
 					<a>Conteúdos</a>
+					<div class="btnExpand">
+						<span class="btnHorizontal"></span>
+						<span class="btnVertical"></span>
+					</div>
+					<ul class="submenuMobile">
+						<li>
+							<a>Item 1</a>
+						</li>
+						<li>
+							<a>Item 2</a>
+						</li>
+						<li>
+							<a>Item 3</a>
+						</li>
+					</ul>
 				</li>
 				<li>
 					<a>Contato</a>
@@ -81,8 +112,8 @@
 		</nav>
 
 		<!-- DESKTOP NAVIGATION CONTENT -->
-		<nav id="menuDesktopNav">
-			<ul class="flex gap-10 text-xl">
+		<nav class="menuDesktopNav">
+			<ul>
 				<li title="Ir para página inicial">
 					<a href="/codeigniter">
 						<svg class="iconHome" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -148,7 +179,7 @@
 				<li>
 					<a>Contato</a>
 				</li>
-				<li id="client" class="p-2 bg-primary-color-site text-white">
+				<li id="client">
 					<a>Área do Cliente</a>
 				</li>
 			</ul>

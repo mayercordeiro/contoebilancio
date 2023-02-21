@@ -22,11 +22,11 @@ header {
 	background-color: #34BD6B;
 	width: 100%;
 	height: 99px;
+	padding: 0 16px;
 	z-index: 100;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 16px;
 	position: absolute;
 	top: 0;
 	transition: all 0.8s ease;
@@ -67,10 +67,6 @@ header {
 	left: 0;
 	border-top: 100px solid #34BD6B;
 	border-right: 99px solid transparent;
-}
-
-.header_before_after_none {
-	display: none !important;
 }
 
 .logo {
@@ -169,29 +165,41 @@ header {
 	position: relative;
 }
 
-.expandMobile::before {
-	content: '';
+.expandMobile .btnExpand {
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	right: 20px;
+	right: 0px;
+	width: 28px;
+	height: 28px;
+}
+
+.expandMobile .btnExpand .btnHorizontal {
+	display: block;
+	width: 10px;
+	height: 2px;
+	background-color: #ffffff;
+	position: relative;
+	right: -9px;
+	top: 13px;
+}
+
+.expandMobile .btnExpand .btnVertical {
+	display: block;
 	width: 2px;
 	height: 10px;
 	background-color: #ffffff;
+	position: relative;
+	right: -13px;
+	top: 7px;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
 
-.expandMobile::after {
-	content: '';
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	right: 16px;
-	width: 10px;
-	height: 2px;
-	background-color: #ffffff;
+.rotateSubmenuMobile {
+	transform: rotate(90deg);
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 @keyframes menuMobileOpenAnimation {
@@ -207,9 +215,10 @@ header {
 .submenuMobile {
 	background-color: #0B2239;
 	width: 100%;
-	margin: 4px 0 8px 0;
+	margin: 8px 0;
 	font-size: 1.3rem;
 	display: none;
+	border-radius: 4px;
 }
 
 .submenuMobile li {
@@ -250,22 +259,28 @@ header {
 }
 
 /* Menu Desktop Content */
-#menuDesktopNav ul {
+.menuDesktopNav>ul {
 	color: #ffffff;
+	display: flex;
+	gap: 2.5rem;
+	font-size: 1.25rem;
+	line-height: 1.75rem;
 }
 
-#menuDesktopNav>ul>li {
+.menuDesktopNav>ul>li {
 	margin: auto;
 	cursor: pointer;
 	position: relative;
 	padding: 16px 0;
+	list-style: none;
+
 }
 
-#menuDesktopNav ul li a {
+.menuDesktopNav ul li a {
 	position: relative;
 }
 
-#menuDesktopNav ul li a::before {
+.menuDesktopNav ul li a::before {
 	content: '';
 	position: absolute;
 	top: 50%;
@@ -279,12 +294,12 @@ header {
 	transition: all 0.3s ease;
 }
 
-#menuDesktopNav ul li:hover a::before {
+.menuDesktopNav ul li:hover a::before {
 	transform: translate(-50%, -50%) rotate(90deg);
 	opacity: 0;
 }
 
-#menuDesktopNav ul li a::after {
+.menuDesktopNav ul li a::after {
 	content: '';
 	position: absolute;
 	top: 50%;
@@ -295,16 +310,16 @@ header {
 	background-color: #0B2239;
 }
 
-#menuDesktopNav ul li:first-child a::before,
-#menuDesktopNav ul li:first-child a::after,
-#menuDesktopNav ul li:last-child a::before,
-#menuDesktopNav ul li:last-child a::after,
+.menuDesktopNav ul li:first-child a::before,
+.menuDesktopNav ul li:first-child a::after,
+.menuDesktopNav ul li:last-child a::before,
+.menuDesktopNav ul li:last-child a::after,
 .submenu li a::before,
 .submenu li a::after,
-#menuDesktopNav ul li:nth-child(6) a::before,
-#menuDesktopNav ul li:nth-child(6) a::after,
-#menuDesktopNav ul li:nth-child(2) a::before,
-#menuDesktopNav ul li:nth-child(2) a::after {
+.menuDesktopNav ul li:nth-child(6) a::before,
+.menuDesktopNav ul li:nth-child(6) a::after,
+.menuDesktopNav ul li:nth-child(2) a::before,
+.menuDesktopNav ul li:nth-child(2) a::after {
 	content: unset !important;
 }
 
@@ -324,11 +339,15 @@ header {
 	transition: all 0.3s ease;
 }
 
+.submenu li:not(:last-child) {
+	border-bottom: 1px solid #565656;
+}
+
 .submenu li:hover {
 	background-color: #34BD6B;
 }
 
-#menuDesktopNav ul li:hover .submenu {
+.menuDesktopNav ul li:hover .submenu {
 	visibility: unset;
 	top: 60px;
 	transition: all 0.3s ease;
@@ -336,7 +355,9 @@ header {
 }
 
 #client {
-	padding: 8px !important;
+	color: #ffffff;
+	padding: 8px;
+	background-color: #34bd6b;
 	transition: all 0.3s ease;
 }
 
@@ -356,17 +377,15 @@ header {
 
 /* Medias */
 @media screen and (max-width: 1449px) {
-	.header_before {
-		display: none;
-	}
 
+	.header_before,
 	.header_after {
 		display: none;
 	}
 }
 
 @media screen and (max-width: 1149px) {
-	#menuDesktopNav {
+	.menuDesktopNav {
 		display: none;
 	}
 }
@@ -390,17 +409,25 @@ header {
 		fill: #0B2239;
 	}
 
-	#menuDesktopNav ul li a::before {
+	.menuDesktopNav ul li a::before {
 		background-color: #fff;
 	}
 
-	#menuDesktopNav ul li a::after {
+	.menuDesktopNav ul li a::after {
 		background-color: #fff;
 	}
 
 	#client {
 		background-color: #fff;
 		color: #0B2239;
+	}
+
+	#client:hover {
+		color: #ffffff;
+	}
+
+	.menuDesktopNav ul {
+		gap: 2.2rem;
 	}
 }
 
@@ -428,7 +455,7 @@ header {
 		background-color: #ffffff;
 	}
 
-	#menuDesktopNav ul {
+	.menuDesktopNav ul {
 		color: #0B2239;
 	}
 }

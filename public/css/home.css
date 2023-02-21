@@ -25,6 +25,7 @@ main {
 	font-size: 24px;
 	line-height: 34px;
 	color: #34BD6B;
+	font-weight: 400;
 }
 
 .leftMainContent h2 {
@@ -32,35 +33,43 @@ main {
 	font-size: 32px;
 	line-height: 52px;
 	color: #FFFFFF;
+	font-weight: 400;
 }
 
 .buttonsMain {
 	margin-top: 40px;
 }
 
-.buttonsMain button:nth-child(1) {
+.buttonsMain button {
 	width: 195px;
-	padding: 8px 0;
+	height: 51px;
 	background-color: #34BD6B;
-	color: #FFFFFF;
+	color: #ffffff;
 	font-size: 24px;
 	margin-right: 16px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
 	transition: all 0.3s ease;
 }
 
-.buttonsMain button:nth-child(1):hover {
+.buttonsMain button:hover {
 	transition: all 0.3s ease;
 	background-color: #FFFFFF;
 	color: #0B2239;
 }
 
+.buttonsMain a {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .buttonsMain button:nth-child(2) {
-	width: 195px;
-	padding: 7px 0;
 	background-color: transparent;
 	border: 1px solid #B5B5B5;
-	color: #FFFFFF;
-	font-size: 24px;
 }
 
 .buttonsMain button:nth-child(2):hover {
@@ -129,12 +138,6 @@ main {
 	border-radius: 8px;
 }
 
-.imagesBottomSobre {
-	width: 290px;
-	height: 220px;
-	border-radius: 8px;
-}
-
 #img-02 {
 	background-image: url(/codeigniter/public/img/sobre-img-02.jpg);
 	background-repeat: no-repeat;
@@ -147,6 +150,26 @@ main {
 	background-position: 21% 40%;
 	background-size: 360px;
 	filter: blur(2px);
+}
+
+#img-01,
+#img-02,
+#img-03 {
+	cursor: pointer;
+	transition: all 0.8s ease-in-out;
+}
+
+#img-01:hover,
+#img-02:hover,
+#img-03:hover {
+	filter: unset;
+	transition: all 0.8s ease-in-out;
+}
+
+.imagesBottomSobre {
+	width: 290px;
+	height: 220px;
+	border-radius: 8px;
 }
 
 .textImagesSobreNos {
@@ -168,14 +191,14 @@ main {
 	font-weight: 700;
 	color: #34BD6B;
 	text-align: center;
-	margin-top: 16px;
+	margin-top: 22px;
 }
 
 .textImagesSobreNos span:nth-child(2) {
 	font-size: 22px;
 	color: #ffffff;
 	text-align: center;
-	margin-top: -14px;
+	margin-top: -6px;
 	line-height: 25px;
 }
 
@@ -186,6 +209,7 @@ main {
 
 .sobreNosTexts>h2 {
 	font-size: 24px;
+	font-weight: 400;
 	line-height: 34px;
 	color: #34BD6B;
 	display: flex;
@@ -202,6 +226,7 @@ main {
 
 .sobreNosTexts>p {
 	font-size: 18px;
+	line-height: 28px;
 	text-align: justify;
 	text-justify: inter-word;
 	color: #555555;
@@ -210,19 +235,26 @@ main {
 
 .btnSobreNos {
 	width: 195px;
-	padding: 8px 0;
+	height: 51px;
 	background-color: #0B2239;
-	color: #FFFFFF;
+	color: #ffffff;
 	font-size: 24px;
-	transition: all 0.3s ease;
+	margin-right: 16px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
 	box-shadow: rgb(0 0 0 / 45%) 0px 25px 20px -20px;
-	margin-bottom: 40px;
+	transition: all 0.3s ease;
 }
 
 .btnSobreNos:hover {
 	background-color: #34BD6B;
 	color: #ffffff;
 	transition: all 0.3s ease;
+}
+
+.btnSobreNos>a {
+	padding-bottom: 2px;
 }
 
 /* END Sobre Nós */
@@ -233,6 +265,7 @@ main {
 
 .especialidades h2 {
 	font-size: 24px;
+	font-weight: 400;
 	line-height: 34px;
 	text-align: center;
 	color: #34BD6B;
@@ -308,29 +341,41 @@ main {
 	justify-content: center;
 }
 
-.especialidadeHover>button {
+.btnSaibaMais {
 	width: 195px;
-	padding: 8px 0;
+	height: 51px;
 	background-color: #34BD6B;
-	color: #FFFFFF;
+	color: #ffffff;
 	font-size: 24px;
 	margin-right: 16px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: rgb(0 0 0 / 45%) 0px 25px 20px -20px;
 	transform: translateY(195px);
 	transition: all 0.6s ease;
 }
 
-.especialidadeHover>button:hover {
-	transition: all 0.3s ease;
+.btnSaibaMais:hover {
 	background-color: #FFFFFF;
 	color: #0B2239;
+	transition: all 0.3s ease;
+}
+
+.btnSaibaMais>a {
+	padding-bottom: 2px;
+}
+
+.especialidadeHover>.btnSaibaMais:hover {
+	transition: all 0.3s ease;
+	background-color: #FFFFFF;
 }
 
 .itemEspecialidade:hover .especialidadeHover {
-	background-color: blue;
 	transform: translateX(0%);
 }
 
-.itemEspecialidade:hover .especialidadeHover>button {
+.itemEspecialidade:hover .especialidadeHover>.btnSaibaMais {
 	transform: translateY(0%);
 	transition: all 0.6s ease;
 }
@@ -359,10 +404,136 @@ main {
 	transition: all 0.3s ease;
 }
 
+/* Blog */
+.blog {
+	margin: 80px auto;
+}
+
+.blog h2 {
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 34px;
+	color: #34BD6B;
+}
+
+.blog h3 {
+	font-size: 48px;
+	line-height: 58px;
+	color: #0B2239;
+	font-weight: 700;
+	max-width: 600px;
+}
+
+.containerBlog {
+	margin-top: 40px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 24px;
+}
+
+.itemBlog {
+	width: 400px;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	padding: 0 16px;
+	border-radius: 8px;
+	color: #0B2239;
+}
+
+.imgBlog {
+	width: 368px;
+	height: 220px;
+	margin-top: 16px;
+	transition: all 0.5s ease-in-out;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.imgBlog>img {
+	max-width: 368px;
+	transition: all 0.5s ease-in-out;
+}
+
+.itemBlog:hover .imgBlog>img {
+	transform: scale(1.2);
+	transition: all 0.5s ease-in-out;
+}
+
+.authorDateBlog {
+	display: flex;
+	height: 50px;
+	width: 100%;
+	padding: 0 16px;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #cbcbcb;
+}
+
+.authorPost,
+.datePost {
+	display: flex;
+	align-items: center;
+}
+
+.authorPost>svg,
+.datePost>svg {
+	margin-right: 8px;
+}
+
+.titleBlog {
+	margin-top: 16px;
+}
+
+.titleBlog h3 {
+	font-size: 20px;
+	text-align: center;
+	line-height: 30px;
+}
+
+.btnBlog {
+	height: 51px;
+	padding: 10px 16px;
+	background-color: #0B2239;
+	color: #FFFFFF;
+	font-size: 24px;
+	transition: all 0.3s ease;
+	box-shadow: rgb(0 0 0 / 45%) 0px 25px 20px -20px;
+	margin: 24px auto 0 auto;
+}
+
+.btnBlog:hover {
+	background-color: #34BD6B;
+	color: #ffffff;
+	transition: all 0.3s ease;
+}
+
+/* END Blog */
+
 /* Medias */
 @media screen and (max-width: 1449px) {
 	.rightMainContent ul {
 		gap: 40px;
+	}
+}
+
+@media screen and (max-width: 1299px) {
+	.containerBlog {
+		justify-content: center;
+	}
+
+	.blog h2 {
+		text-align: center;
+	}
+
+	.blog h3 {
+		text-align: center;
+		margin: 0 auto;
 	}
 }
 
@@ -387,13 +558,19 @@ main {
 }
 
 @media screen and (max-width: 1149px) {
+	.mainContent {
+		height: auto;
+	}
+
 	.containerWebsite {
 		align-items: flex-start;
+		padding: 80px 20px 0 20px;
 	}
 
 	.rightMainContent ul {
 		flex-direction: column;
 		margin-right: 80px;
+		margin-bottom: 40px;
 	}
 }
 
@@ -465,5 +642,20 @@ main {
 	.especialidades>h3 {
 		font-size: 44px;
 		line-height: 54px;
+	}
+
+	.blog>h3 {
+		font-size: 44px;
+		line-height: 54px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.itemBlog {
+		max-width: 350px;
+	}
+
+	.imgBlog {
+		max-width: 322px;
 	}
 }

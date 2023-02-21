@@ -1,5 +1,5 @@
 <footer>
-	<section class="containetSections">
+	<section class="containerSections">
 		<address class="contactContainer">
 			<div class="itemContact">
 				<img src="/codeigniter/public/img/phone-footer.png" alt="Ícone de um telefone nas cores branca e verde">
@@ -21,7 +21,7 @@
 				<img src="/codeigniter/public/img/address-footer.png" alt="Ícone de um telefone nas cores branca e verde">
 				<div class="itemContactInfos">
 					<span>Endereço</span>
-					<span>(41) 3272-1058</span>
+					<span>R. Via Veneto, 1778</span>
 				</div>
 			</div>
 		</address>

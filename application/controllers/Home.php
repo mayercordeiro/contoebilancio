@@ -25,8 +25,8 @@ class Home extends CI_Controller
 			),
 		);
 
-		$this->load->view('website/header', $data);
+		$this->load->view('layout/website/header', $data);
 		$this->load->view('website/index');
-		$this->load->view('website/footer');
+		$this->load->view('layout/website/footer');
 	}
 }

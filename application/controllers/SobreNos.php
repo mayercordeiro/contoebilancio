@@ -24,8 +24,8 @@ class SobreNos extends CI_Controller
 			),
 		);
 
-		$this->load->view('website/header', $data);
+		$this->load->view('layout/website/header', $data);
 		$this->load->view('website/sobre-nos');
-		$this->load->view('website/footer');
+		$this->load->view('layout/website/footer');
 	}
 }
