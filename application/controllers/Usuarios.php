@@ -32,32 +32,74 @@ class Usuarios extends CI_Controller
 	public function edit($user_id = NULL)
 	{
 		if (!$user_id || !$this->ion_auth->user($user_id)->row()) {
-			exit('Usuário não encontrado');
+
+			$this->session->set_flashdata('error', 'Usuário não encontrado');
+			redirect('usuarios');
 		} else {
-			$data = array(
-				'titulo' => 'Editar Usuário',
-				'usuario' => $this->ion_auth->user($user_id)->row(),
-				'perfil_usuario' => $this->ion_auth->get_users_groups($user_id)->row(),
-			);
 
-			/* 
-				Array
-				(
-				[first_name] => Usuário
-				[last_name] => Um
-				[email] => user1@gmail.com
-				[username] => usuario1
-				[active] => 1
-				[perfil_usuario] => 2
-				[password] => 
-				[confirm_password] => 
-				[usuario_id] => 3
-				)
-			*/
+			$this->form_validation->set_rules('first_name', 'nome', 'trim|required');
+			$this->form_validation->set_rules('last_name', 'sobrenome', 'trim|required');
+			$this->form_validation->set_rules('email', 'email', 'trim|required|valid_email|callback_email_check');
+			$this->form_validation->set_rules('username', 'usuário', 'trim|required|callback_username_check');
+			$this->form_validation->set_rules('password', 'senha', 'min_length[6]|max_length[255]');
+			$this->form_validation->set_rules('confirm_password', 'confirme sua senha', 'matches[password]');
+
+			if ($this->form_validation->run()) {
+
+				$data = elements(
+					array(
+						'first_name',
+						'last_name',
+						'email',
+						'username',
+						'active',
+						'password',
+					),
+					$this->input->post()
+				);
+
+				$data = $this->security->xss_clean($data);
+
+				echo '<pre>';
+				print_r($data);
+				exit();
+			} else {
+				$data = array(
+					'titulo' => 'Editar Usuário',
+					'usuario' => $this->ion_auth->user($user_id)->row(),
+					'perfil_usuario' => $this->ion_auth->get_users_groups($user_id)->row(),
+				);
+
+				$this->load->view('layout/painel/header', $data);
+				$this->load->view('painel/usuarios/edit');
+				$this->load->view('layout/painel/footer');
+			}
 		}
+	}
 
-		$this->load->view('layout/painel/header', $data);
-		$this->load->view('painel/usuarios/edit');
-		$this->load->view('layout/painel/footer');
+	public function email_check($email)
+	{
+		$usuario_id = $this->input->post('usuario_id');
+
+		if ($this->Core_model->get_by_id('users', array('email' => $email, 'id !=' => $usuario_id))) {
+
+			$this->form_validation->set_message('email_check', 'Email já cadastrado.');
+			return FALSE;
+		} else {
+			return TRUE;
+		}
+	}
+
+	public function username_check($username)
+	{
+		$usuario_id = $this->input->post('usuario_id');
+
+		if ($this->Core_model->get_by_id('users', array('username' => $username, 'id !=' => $usuario_id))) {
+
+			$this->form_validation->set_message('username_check', 'Usuário já cadastrado.');
+			return FALSE;
+		} else {
+			return TRUE;
+		}
 	}
 }

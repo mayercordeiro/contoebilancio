@@ -32,19 +32,31 @@
 						<div class="col-md-4">
 							<label for="nome">Nome</label>
 							<input type="text" name="first_name" class="form-control" id="nome" aria-describedby="nomeHelp" placeholder="Seu Nome" value="<?= $usuario->first_name; ?>">
-							<small id="nomeHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+							<?php echo form_error(
+								'first_name',
+								'<small id="nomeHelp" class="form-text text-danger">',
+								'</small>'
+							); ?>
 						</div>
 
 						<div class="col-md-4">
 							<label for="sobrenome">Sobrenome</label>
 							<input type="text" name="last_name" class="form-control" id="sobrenome" aria-describedby="sobrenomeHelp" placeholder="Seu Sobreome" value="<?= $usuario->last_name; ?>">
-							<small id="sobrenomeHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+							<?php echo form_error(
+								'last_name',
+								'<small id="nomeHelp" class="form-text text-danger">',
+								'</small>'
+							); ?>
 						</div>
 
 						<div class="col-md-4">
 							<label for="email">Email (Login)</label>
 							<input type="text" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Seu Email" value="<?= $usuario->email; ?>">
-							<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+							<?php echo form_error(
+								'email',
+								'<small id="nomeHelp" class="form-text text-danger">',
+								'</small>'
+							); ?>
 						</div>
 					</div>
 
@@ -52,7 +64,11 @@
 						<div class="col-md-4">
 							<label for="usuario">Usuário</label>
 							<input type="text" name="username" class="form-control" id="usuario" aria-describedby="usuarioHelp" placeholder="Seu Usuário" value="<?= $usuario->username; ?>">
-							<small id="usuarioHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+							<?php echo form_error(
+								'username',
+								'<small id="nomeHelp" class="form-text text-danger">',
+								'</small>'
+							); ?>
 						</div>
 
 						<div class="col-md-4">
@@ -76,13 +92,21 @@
 						<div class="col-md-6">
 							<label for="senha">Senha</label>
 							<input type="password" name="password" class="form-control" id="senha" aria-describedby="passwordHelp">
-							<small id="passwordHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+							<?php echo form_error(
+								'password',
+								'<small id="nomeHelp" class="form-text text-danger">',
+								'</small>'
+							); ?>
 						</div>
 
 						<div class="col-md-6">
 							<label for="confirmar_senha">Confirme sua senha</label>
 							<input type="password" name="confirm_password" class="form-control" id="confirmar_senha" aria-describedby="confirmPasswordHelp">
-							<small id="confirmPasswordHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+							<?php echo form_error(
+								'confirm_password',
+								'<small id="nomeHelp" class="form-text text-danger">',
+								'</small>'
+							); ?>
 						</div>
 
 						<input type="hidden" name="usuario_id" value="<?php echo $usuario->id ?>">
