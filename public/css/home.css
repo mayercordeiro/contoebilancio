@@ -323,7 +323,12 @@ main {
 	font-size: 18px;
 	line-height: 28px;
 	text-align: center;
-	padding: 4px 8px 0 8px;
+	padding: 4px 16px 0 16px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 4;
 }
 
 .especialidadeHover {

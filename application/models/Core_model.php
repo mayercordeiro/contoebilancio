@@ -46,4 +46,17 @@ class Core_model extends CI_Model
 			return FALSE;
 		}
 	}
+
+	public function update($tabela = NULL, $data = NULL, $condicao = NULL)
+	{
+		if ($tabela && is_array($data) && is_array($condicao)) {
+			if ($this->db->update($tabela, $data, $condicao)) {
+				$this->session->set_flashdata('sucesso', 'Dados salvos com sucesso');
+			} else {
+				$this->session->set_flashdata('error', 'Erro ao atualizar os dados');
+			}
+		} else {
+			return FALSE;
+		}
+	}
 }

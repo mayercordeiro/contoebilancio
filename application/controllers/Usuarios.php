@@ -55,14 +55,36 @@ class Usuarios extends CI_Controller
 						'active',
 						'password',
 					),
+
 					$this->input->post()
 				);
 
 				$data = $this->security->xss_clean($data);
 
-				echo '<pre>';
-				print_r($data);
-				exit();
+				// Verifica se o password foi passado
+				$password = $this->input->post('password');
+
+				if (!$password) {
+					unset($data['password']);
+				}
+				//
+
+				if ($this->ion_auth->update($user_id, $data)) {
+					$perfil_usuario_db = $this->ion_auth->get_users_groups($user_id)->row();
+					$perfil_usuario_post = $this->input->post('perfil_usuario');
+
+					// Se for diferente, atualiza o perfil do usuário
+					if ($perfil_usuario_post != $perfil_usuario_db->id) {
+						$this->ion_auth->remove_from_group($perfil_usuario_db->id, $user_id);
+						$this->ion_auth->add_to_group($perfil_usuario_post, $user_id);
+					}
+
+					$this->session->set_flashdata('sucesso', 'Dados salvos com sucesso');
+				} else {
+					$this->session->set_flashdata('error', 'Erro ao atualizar os dados');
+				}
+
+				redirect('usuarios');
 			} else {
 				$data = array(
 					'titulo' => 'Editar Usuário',

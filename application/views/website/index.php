@@ -178,8 +178,8 @@
 								</g>
 							</g>
 						</svg>
-						<h3>Nome Especialidade</h3>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium at itaque blanditiis debitis molestias quidem hic.</p>
+						<h3>Assessoria Contábil</h3>
+						<p>Oferecemos soluções personalizadas para atender às necessidades contábeis da sua empresa. Oferecemos serviços especializados em contabilidade, incluindo a preparação de demonstrações financeiras, relatórios contábeis e fiscais, além de assessoria tributária e trabalhista. Nossa equipe de contadores experientes está sempre atualizada com as regulamentações contábeis mais recentes e pode ajudá-lo a tomar decisões informadas e estratégicas para o seu negócio. Nós nos esforçamos para fornecer um serviço de alta qualidade, eficiente e confiável para ajudar sua empresa a crescer e prosperar.</p>
 					</div>
 					<div class="especialidadeHover">
 						<button class="btnSaibaMais">
@@ -200,8 +200,8 @@
 								</g>
 							</g>
 						</svg>
-						<h3>Nome Especialidade</h3>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium at itaque blanditiis debitis molestias quidem hic.</p>
+						<h3>Assessoria Fiscal e Tributária</h3>
+						<p>A nossa Assessoria Fiscal e Tributária oferece soluções personalizadas para ajudar a sua empresa a lidar com as complexidades fiscais e tributárias. Oferecemos um serviço abrangente de planejamento tributário, orientação fiscal, revisão de declarações fiscais e assessoria para cumprimento de obrigações fiscais. Nossa equipe de especialistas em tributação está sempre atualizada com as mudanças regulatórias mais recentes e pode ajudá-lo a tomar decisões informadas e estratégicas em relação aos impostos. Nós nos esforçamos para garantir que sua empresa esteja em conformidade com as leis fiscais aplicáveis e a minimizar os riscos e custos tributários, ao mesmo tempo em que maximiza o lucro. Com nossa assessoria, sua empresa pode se concentrar em seus objetivos de negócios enquanto cuidamos de seus assuntos fiscais e tributários.</p>
 					</div>
 					<div class="especialidadeHover">
 						<button class="btnSaibaMais">
@@ -222,74 +222,8 @@
 								</g>
 							</g>
 						</svg>
-						<h3>Nome Especialidade</h3>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium at itaque blanditiis debitis molestias quidem hic.</p>
-					</div>
-					<div class="especialidadeHover">
-						<button class="btnSaibaMais">
-							<a href="#">Saiba Mais</a>
-						</button>
-					</div>
-				</div>
-				<div class="itemEspecialidade">
-					<div class="especialidadeInicial">
-						<svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80px" height="80px" viewBox="0 0 958.736 958.736" xml:space="preserve">
-							<g>
-								<g>
-									<path d="M95.5,944.268h63.8c27.6,0,50-22.399,50-50v-164.3c-53.2,7.8-107.9,12.7-162.9,14.4c-0.3,0-0.6,0-1,0v149.8C45.5,921.868,67.9,944.268,95.5,944.268z" />
-									<path d="M389.1,944.268c27.601,0,50-22.399,50-50v-219.5c-26.5,9.101-54,17.4-81.699,24.801c-24.801,6.6-50.4,12.6-75.9,17.8c-2,0.399-4.1,0.8-6.2,1.2v175.6c0,27.6,22.4,50,50,50h63.8V944.268z" />
-									<path d="M618.7,944.268c27.6,0,50-22.399,50-50V563.868c-4.8,3.2-9.601,6.3-14.5,9.3c-42.3,26.6-88.4,50.7-137.101,71.6c-4,1.7-8.1,3.4-12.199,5.101v244.3c0,27.6,22.399,50,50,50h63.8V944.268z" />
-									<path d="M898.4,894.268v-577.8c-10.101,20.5-21.801,40.7-35,60.4c-29.101,43.3-65.5,84.3-108.4,121.8c-6.6,5.8-13.4,11.5-20.4,17.2v378.5c0,27.6,22.4,50,50,50H848.4C876,944.268,898.4,921.868,898.4,894.268z" fill="#34BD6B" />
-									<path d="M25.2,713.868c0.1,0,0.3,0,0.4,0c6.7-0.101,13.3-0.3,20-0.5c55.6-1.7,110.3-6.7,163.8-14.7c22.2-3.3,44.1-7.2,65.9-11.6c25-5.101,49.7-10.9,74.101-17.4c30.8-8.2,60.699-17.4,89.699-27.7c22.5-8,44.5-16.5,65.9-25.7c47.3-20.3,91.7-43.399,132.8-69.3c10.601-6.7,21-13.5,31-20.5c23.5-16.3,45.5-33.399,65.9-51.2c40.899-35.699,75.399-74.399,103.1-115.7c27.8-41.4,48.101-84.4,60.7-128.5c5.7-19.9,9.8-39.9,12.4-60.2h22.8c20.1,0,32-22.6,20.6-39.2l-73.5-106.5c-5-7.2-12.8-10.8-20.6-10.8s-15.601,3.6-20.601,10.8l-73.399,106.5c-11.4,16.6,0.399,39.2,20.6,39.2h22.9c-7.8,45.6-26.2,90.2-55,133c-6.3,9.3-13,18.5-20.101,27.5c-18.899,24-40.899,46.899-65.899,68.7c-25.2,22-53.3,42.8-84.3,62.399c-25.101,15.8-51.601,30.5-79.5,44c-21.2,10.3-43.2,19.9-65.9,28.8c-36.6,14.4-75.2,27-115.5,37.801c-16,4.3-32.1,8.199-48.4,11.8c-21.7,4.8-43.7,9-65.9,12.6c-53.4,8.7-108.1,14-163.8,15.9c-6.9,0.2-13.8,0.399-20.8,0.5c-13.6,0.3-24.6,11.3-24.6,25v50C0.2,702.668,11.4,713.868,25.2,713.868z" fill="#34BD6B" />
-								</g>
-							</g>
-						</svg>
-						<h3>Nome Especialidade</h3>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium at itaque blanditiis debitis molestias quidem hic.</p>
-					</div>
-					<div class="especialidadeHover">
-						<button class="btnSaibaMais">
-							<a href="#">Saiba Mais</a>
-						</button>
-					</div>
-				</div>
-				<div class="itemEspecialidade">
-					<div class="especialidadeInicial">
-						<svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80px" height="80px" viewBox="0 0 958.736 958.736" xml:space="preserve">
-							<g>
-								<g>
-									<path d="M95.5,944.268h63.8c27.6,0,50-22.399,50-50v-164.3c-53.2,7.8-107.9,12.7-162.9,14.4c-0.3,0-0.6,0-1,0v149.8C45.5,921.868,67.9,944.268,95.5,944.268z" />
-									<path d="M389.1,944.268c27.601,0,50-22.399,50-50v-219.5c-26.5,9.101-54,17.4-81.699,24.801c-24.801,6.6-50.4,12.6-75.9,17.8c-2,0.399-4.1,0.8-6.2,1.2v175.6c0,27.6,22.4,50,50,50h63.8V944.268z" />
-									<path d="M618.7,944.268c27.6,0,50-22.399,50-50V563.868c-4.8,3.2-9.601,6.3-14.5,9.3c-42.3,26.6-88.4,50.7-137.101,71.6c-4,1.7-8.1,3.4-12.199,5.101v244.3c0,27.6,22.399,50,50,50h63.8V944.268z" />
-									<path d="M898.4,894.268v-577.8c-10.101,20.5-21.801,40.7-35,60.4c-29.101,43.3-65.5,84.3-108.4,121.8c-6.6,5.8-13.4,11.5-20.4,17.2v378.5c0,27.6,22.4,50,50,50H848.4C876,944.268,898.4,921.868,898.4,894.268z" fill="#34BD6B" />
-									<path d="M25.2,713.868c0.1,0,0.3,0,0.4,0c6.7-0.101,13.3-0.3,20-0.5c55.6-1.7,110.3-6.7,163.8-14.7c22.2-3.3,44.1-7.2,65.9-11.6c25-5.101,49.7-10.9,74.101-17.4c30.8-8.2,60.699-17.4,89.699-27.7c22.5-8,44.5-16.5,65.9-25.7c47.3-20.3,91.7-43.399,132.8-69.3c10.601-6.7,21-13.5,31-20.5c23.5-16.3,45.5-33.399,65.9-51.2c40.899-35.699,75.399-74.399,103.1-115.7c27.8-41.4,48.101-84.4,60.7-128.5c5.7-19.9,9.8-39.9,12.4-60.2h22.8c20.1,0,32-22.6,20.6-39.2l-73.5-106.5c-5-7.2-12.8-10.8-20.6-10.8s-15.601,3.6-20.601,10.8l-73.399,106.5c-11.4,16.6,0.399,39.2,20.6,39.2h22.9c-7.8,45.6-26.2,90.2-55,133c-6.3,9.3-13,18.5-20.101,27.5c-18.899,24-40.899,46.899-65.899,68.7c-25.2,22-53.3,42.8-84.3,62.399c-25.101,15.8-51.601,30.5-79.5,44c-21.2,10.3-43.2,19.9-65.9,28.8c-36.6,14.4-75.2,27-115.5,37.801c-16,4.3-32.1,8.199-48.4,11.8c-21.7,4.8-43.7,9-65.9,12.6c-53.4,8.7-108.1,14-163.8,15.9c-6.9,0.2-13.8,0.399-20.8,0.5c-13.6,0.3-24.6,11.3-24.6,25v50C0.2,702.668,11.4,713.868,25.2,713.868z" fill="#34BD6B" />
-								</g>
-							</g>
-						</svg>
-						<h3>Nome Especialidade</h3>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium at itaque blanditiis debitis molestias quidem hic.</p>
-					</div>
-					<div class="especialidadeHover">
-						<button class="btnSaibaMais">
-							<a href="#">Saiba Mais</a>
-						</button>
-					</div>
-				</div>
-				<div class="itemEspecialidade">
-					<div class="especialidadeInicial">
-						<svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80px" height="80px" viewBox="0 0 958.736 958.736" xml:space="preserve">
-							<g>
-								<g>
-									<path d="M95.5,944.268h63.8c27.6,0,50-22.399,50-50v-164.3c-53.2,7.8-107.9,12.7-162.9,14.4c-0.3,0-0.6,0-1,0v149.8C45.5,921.868,67.9,944.268,95.5,944.268z" />
-									<path d="M389.1,944.268c27.601,0,50-22.399,50-50v-219.5c-26.5,9.101-54,17.4-81.699,24.801c-24.801,6.6-50.4,12.6-75.9,17.8c-2,0.399-4.1,0.8-6.2,1.2v175.6c0,27.6,22.4,50,50,50h63.8V944.268z" />
-									<path d="M618.7,944.268c27.6,0,50-22.399,50-50V563.868c-4.8,3.2-9.601,6.3-14.5,9.3c-42.3,26.6-88.4,50.7-137.101,71.6c-4,1.7-8.1,3.4-12.199,5.101v244.3c0,27.6,22.399,50,50,50h63.8V944.268z" />
-									<path d="M898.4,894.268v-577.8c-10.101,20.5-21.801,40.7-35,60.4c-29.101,43.3-65.5,84.3-108.4,121.8c-6.6,5.8-13.4,11.5-20.4,17.2v378.5c0,27.6,22.4,50,50,50H848.4C876,944.268,898.4,921.868,898.4,894.268z" fill="#34BD6B" />
-									<path d="M25.2,713.868c0.1,0,0.3,0,0.4,0c6.7-0.101,13.3-0.3,20-0.5c55.6-1.7,110.3-6.7,163.8-14.7c22.2-3.3,44.1-7.2,65.9-11.6c25-5.101,49.7-10.9,74.101-17.4c30.8-8.2,60.699-17.4,89.699-27.7c22.5-8,44.5-16.5,65.9-25.7c47.3-20.3,91.7-43.399,132.8-69.3c10.601-6.7,21-13.5,31-20.5c23.5-16.3,45.5-33.399,65.9-51.2c40.899-35.699,75.399-74.399,103.1-115.7c27.8-41.4,48.101-84.4,60.7-128.5c5.7-19.9,9.8-39.9,12.4-60.2h22.8c20.1,0,32-22.6,20.6-39.2l-73.5-106.5c-5-7.2-12.8-10.8-20.6-10.8s-15.601,3.6-20.601,10.8l-73.399,106.5c-11.4,16.6,0.399,39.2,20.6,39.2h22.9c-7.8,45.6-26.2,90.2-55,133c-6.3,9.3-13,18.5-20.101,27.5c-18.899,24-40.899,46.899-65.899,68.7c-25.2,22-53.3,42.8-84.3,62.399c-25.101,15.8-51.601,30.5-79.5,44c-21.2,10.3-43.2,19.9-65.9,28.8c-36.6,14.4-75.2,27-115.5,37.801c-16,4.3-32.1,8.199-48.4,11.8c-21.7,4.8-43.7,9-65.9,12.6c-53.4,8.7-108.1,14-163.8,15.9c-6.9,0.2-13.8,0.399-20.8,0.5c-13.6,0.3-24.6,11.3-24.6,25v50C0.2,702.668,11.4,713.868,25.2,713.868z" fill="#34BD6B" />
-								</g>
-							</g>
-						</svg>
-						<h3>Nome Especialidade</h3>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium at itaque blanditiis debitis molestias quidem hic.</p>
+						<h3>Societário</h3>
+						<p>Ajudamos a sua empresa a tomar decisões informadas e estratégicas em relação à sua estrutura societária e às questões tributárias. Oferecemos serviços abrangentes de consultoria e planejamento societário, reorganização societária, avaliação de riscos e oportunidades fiscais, bem como revisão de estruturas tributárias e de compliance. Nossa equipe de especialistas em societário e tributação está sempre atualizada com as mudanças regulatórias mais recentes e pode ajudá-lo a maximizar seus resultados financeiros e minimizar seus riscos legais e fiscais. Nós nos esforçamos para garantir que sua empresa tenha a estrutura mais eficiente e adequada para seus negócios e para sua situação tributária. Com nossa assessoria, sua empresa pode se concentrar em seus objetivos de negócios enquanto cuidamos de seus assuntos societários e tributários.</p>
 					</div>
 					<div class="especialidadeHover">
 						<button class="btnSaibaMais">
