@@ -21,7 +21,7 @@
 	<header id="header" class="">
 		<!-- LOGO HEADER -->
 		<div title="Conto & Bilancio Contabilidade" class="logo">
-			<a href="/codeigniter">
+			<a href="<?= base_url('') ?>">
 				<svg width="276" height="63" viewBox="0 0 276 63" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M26.9988 44.9981V47.2448V53.9981H49.4985C51.9383 53.9981 53.9995 56.0574 53.9995 58.4972V62.9981H49.4985H46.0649H26.9988H17.9986V53.9981V44.9981V35.9981V26.9981V17.9981H26.9988H49.4985C51.9383 17.9981 53.9995 20.0574 53.9995 22.4972C53.9995 24.9369 51.9383 26.9981 49.4985 26.9981H26.9988V30.7931V35.9981V44.9981ZM9.00023 62.9962H0V0H9.00023H18.0005H49.5004C61.8754 0 72 10.1243 72 22.4991C72 26.5968 70.8889 30.4486 68.9545 33.7685C67.4251 36.3918 65.379 38.682 62.96 40.4991C68.4397 44.6139 72 51.1609 72 58.4991V63H62.9998V58.4991C62.9998 51.0738 56.9258 45 49.5004 45H35.9991V36H49.4985C54.467 36 58.8299 33.2801 61.1732 29.2562C62.3335 27.2669 62.9979 24.9577 62.9979 22.5009C62.9979 15.0757 56.922 9.00189 49.4985 9.00189H17.9986H8.99835V62.9962H9.00023Z" fill="white" />
 					<path d="M118 34H245" stroke="white" stroke-miterlimit="10" />
@@ -43,48 +43,44 @@
 		<nav id="menuMobileNav" class="menuClosed">
 			<ul>
 				<li>
-					<a href="">Home</a>
+					<a href="<?= base_url('') ?>">Home</a>
 				</li>
 				<li>
-					<a href="/codeigniter/sobrenos">Sobre Nós</a>
+					<a href="<?= base_url('sobrenos') ?>">Sobre Nós</a>
 				</li>
 				<li class="expandMobile">
-					<a>Serviços</a>
+					<a href="<?= base_url('servicos') ?>">Serviços</a>
 					<div class="btnExpand">
 						<span class="btnHorizontal"></span>
 						<span class="btnVertical"></span>
 					</div>
 					<ul class="submenuMobile">
 						<li>
-							<a>Assessoria Contábil</a>
+							<a href="<?= base_url('servicos/assessoriacontabil') ?>">Assessoria Contábil</a>
 						</li>
 						<li>
-							<a>Assessoria Fiscal e Tributária</a>
+							<a href=" <?= base_url('servicos/assessoriafiscaletributaria') ?>">Assessoria Fiscal e Tributária</a>
 						</li>
 						<li>
-							Societário
+							<a href="<?= base_url('servicos/societario') ?>">Societário</a>
 						</li>
 						<li>
-							<a>Departamento Pessoal</a>
+							<a href="<?= base_url('servicos/gestaorh') ?>">Gestão de Recursos Humanos</a>
 						</li>
 					</ul>
 				</li>
-				<li class="expandMobile">
+				<li class=" expandMobile">
 					<a>Utilitários</a>
 					<div class="btnExpand">
 						<span class="btnHorizontal"></span>
 						<span class="btnVertical"></span>
 					</div>
 					<ul class="submenuMobile">
-						<li>
-							<a>Item 1</a>
-						</li>
-						<li>
-							<a>Item 2</a>
-						</li>
-						<li>
-							<a>Item 3</a>
-						</li>
+						<?php foreach ($utilitarios as $utilitario) : ?>
+							<li>
+								<a href="<?= $utilitario->url ?>" target="_blank"><?= $utilitario->nome ?></a>
+							</li>
+						<?php endforeach; ?>
 					</ul>
 				</li>
 				<li class="expandMobile">
@@ -115,7 +111,7 @@
 		<nav class="menuDesktopNav">
 			<ul>
 				<li title="Ir para página inicial">
-					<a href="/codeigniter">
+					<a href="<?= base_url('') ?>">
 						<svg class="iconHome" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clip-path="url(#clip0_7_55)">
 								<path d="M27.6111 13.4711C27.4646 13.6361 27.285 13.7685 27.084 13.8596C26.883 13.9507 26.6651 13.9986 26.4444 14C26.0661 14.0009 25.7006 13.8625 25.4178 13.6111L24.8889 13.1569V24.8889C24.8864 25.7133 24.5579 26.5032 23.9749 27.0861C23.392 27.669 22.6021 27.9975 21.7778 28H17.8889C17.6826 28 17.4848 27.9181 17.3389 27.7722C17.1931 27.6263 17.1111 27.4285 17.1111 27.2222V18.6667C17.1111 18.2541 16.9472 17.8585 16.6555 17.5667C16.3638 17.275 15.9681 17.1111 15.5556 17.1111H12.4444C12.0319 17.1111 11.6362 17.275 11.3445 17.5667C11.0528 17.8585 10.8889 18.2541 10.8889 18.6667V27.2222C10.8889 27.4285 10.8069 27.6263 10.6611 27.7722C10.5152 27.9181 10.3174 28 10.1111 28H6.22222C5.39786 27.9975 4.60797 27.669 4.02505 27.0861C3.44214 26.5032 3.11357 25.7133 3.11111 24.8889V20.2222C3.09555 18.0289 3.09555 15.1511 3.11111 13.1756L2.58222 13.6111C2.43078 13.7566 2.25145 13.8699 2.05505 13.9442C1.85864 14.0185 1.64923 14.0522 1.43943 14.0434C1.22963 14.0346 1.02378 13.9834 0.834291 13.893C0.644803 13.8025 0.475599 13.6745 0.336876 13.5169C0.198152 13.3593 0.0927821 13.1752 0.027115 12.9757C-0.0385521 12.7762 -0.0631564 12.5656 -0.045215 12.3563C-0.0272736 12.1471 0.032842 11.9437 0.131509 11.7583C0.230176 11.573 0.365351 11.4095 0.528888 11.2778L12.9733 0.388904C13.2572 0.139518 13.6221 0.00198364 14 0.00198364C14.3779 0.00198364 14.7428 0.139518 15.0267 0.388904L18.8844 3.76446C19.0488 3.56741 19.2529 3.40734 19.4835 3.29475C19.714 3.18215 19.9658 3.11957 20.2222 3.11113H21.7778C22.1778 3.14824 22.5523 3.32405 22.8363 3.60812C23.1204 3.8922 23.2962 4.26666 23.3333 4.66668V7.77779L27.4711 11.2778C27.7802 11.5503 27.9685 11.9343 27.9948 12.3455C28.021 12.7567 27.883 13.1615 27.6111 13.4711Z" fill="#0B2239" />
@@ -129,37 +125,33 @@
 					</a>
 				</li>
 				<li>
-					<a href="/codeigniter/sobrenos">Sobre Nós</a>
+					<a href="<?= base_url('sobrenos') ?>">Sobre Nós</a>
 				</li>
 				<li>
-					<a>Serviços</a>
+					<a href="<?= base_url('servicos') ?>">Serviços</a>
 					<ul class="submenu">
 						<li>
-							<a>Assessoria Contábil</a>
+							<a href="<?= base_url('servicos/assessoriacontabil') ?>">Assessoria Contábil</a>
 						</li>
 						<li>
-							<a>Assessoria Fiscal e Tributária</a>
+							<a href=" <?= base_url('servicos/assessoriafiscaletributaria') ?>">Assessoria Fiscal e Tributária</a>
 						</li>
 						<li>
-							Societário
+							<a href="<?= base_url('servicos/societario') ?>">Societário</a>
 						</li>
 						<li>
-							<a>Departamento Pessoal</a>
+							<a href="<?= base_url('servicos/gestaorh') ?>">Gestão de Recursos Humanos</a>
 						</li>
 					</ul>
 				</li>
 				<li>
 					<a>Utilitários</a>
-					<ul class="submenu">
-						<li>
-							<a>Item 1</a>
-						</li>
-						<li>
-							<a>Item 2</a>
-						</li>
-						<li>
-							<a>Item 3</a>
-						</li>
+					<ul class=" submenu">
+						<?php foreach ($utilitarios as $utilitario) : ?>
+							<li>
+								<a href="<?= $utilitario->url ?>" target="_blank"><?= $utilitario->nome ?></a>
+							</li>
+						<?php endforeach; ?>
 					</ul>
 				</li>
 				<li>

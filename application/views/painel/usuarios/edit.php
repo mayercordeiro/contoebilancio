@@ -21,7 +21,7 @@
 
 		<div class="card shadow mb-4">
 			<div class="card-header py-3">
-				<a title="Cadastrar novo usuário" href="<?php echo base_url('/usuarios'); ?>" class="btn btn-outline-secondary btn-sm float-right">
+				<a title="Voltar para usuários cadastrados" href="<?php echo base_url('/usuarios'); ?>" class="btn btn-outline-secondary btn-sm float-right">
 					<i class="fas fa-chevron-left"></i>&nbsp;&nbsp;Voltar
 				</a>
 			</div>

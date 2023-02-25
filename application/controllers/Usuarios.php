@@ -99,6 +99,49 @@ class Usuarios extends CI_Controller
 		}
 	}
 
+	public function add()
+	{
+		$this->form_validation->set_rules('first_name', 'nome', 'trim|required');
+		$this->form_validation->set_rules('last_name', 'sobrenome', 'trim|required');
+		$this->form_validation->set_rules('email', 'email', 'trim|required|valid_email|is_unique[users.email]');
+		$this->form_validation->set_rules('username', 'usuário', 'trim|required|is_unique[users.username]');
+		$this->form_validation->set_rules('password', 'senha', 'required|min_length[6]|max_length[255]');
+		$this->form_validation->set_rules('confirm_password', 'confirme sua senha', 'matches[password]');
+
+		if ($this->form_validation->run()) {
+
+			$username = $this->security->xss_clean($this->input->post('username'));
+			$password = $this->security->xss_clean($this->input->post('password'));
+			$email = $this->security->xss_clean($this->input->post('email'));
+			$additional_data = array(
+				'first_name' => $this->input->post('first_name'),
+				'last_name' => $this->input->post('last_name'),
+				'username' => $this->input->post('username'),
+				'active' => $this->input->post('active'),
+			);
+			$group = array($this->input->post('perfil_usuario'));
+
+			$additional_data = $this->security->xss_clean($additional_data);
+			$group = $this->security->xss_clean($group);
+
+			if ($this->ion_auth->register($username, $password, $email, $additional_data, $group)) {
+				$this->session->set_flashdata('sucesso', 'Usuário adicionado com sucesso');
+			} else {
+				$this->session->set_flashdata('error', 'Erro ao adicionar usuário');
+			}
+
+			redirect('usuarios');
+		} else {
+			$data = array(
+				'titulo' => 'Adicionar Usuário',
+			);
+
+			$this->load->view('layout/painel/header', $data);
+			$this->load->view('painel/usuarios/add');
+			$this->load->view('layout/painel/footer');
+		}
+	}
+
 	public function email_check($email)
 	{
 		$usuario_id = $this->input->post('usuario_id');
