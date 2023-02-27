@@ -109,6 +109,10 @@
 							); ?>
 						</div>
 
+						<div class="alert alert-secondary">
+							Se não deseja altera sua senha deixe os campos senha e confirmar senha sem preencher.
+						</div>
+
 						<input type="hidden" name="usuario_id" value="<?php echo $usuario->id ?>">
 					</div>
 

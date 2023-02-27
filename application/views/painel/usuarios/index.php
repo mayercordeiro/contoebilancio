@@ -38,7 +38,7 @@
 		<?php if ($message = $this->session->flashdata('error')) : ?>
 			<div class="row">
 				<div class="col-md-12">
-					<div class="alert alert-warning alert-dismissible fade show" role="alert">
+					<div class="alert alert-danger alert-dismissible fade show" role="alert">
 						<strong>
 							<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
 							<?php echo $message . '!' ?>
@@ -66,6 +66,7 @@
 								<th>ID</th>
 								<th>Usuário</th>
 								<th>Login</th>
+								<th>Perfil de Usuário</th>
 								<th class="text-center">Ativo</th>
 								<th class="text-right no-sort">Ações</th>
 							</tr>
@@ -76,16 +77,35 @@
 									<td><?= $user->id ?></td>
 									<td><?= $user->username ?></td>
 									<td><?= $user->email ?></td>
+									<td><?= ($this->ion_auth->is_admin($user->id)) ? 'Administrador' : 'Colaborador' ?></td>
 									<td class="text-center pr-4"><?= ($user->active == 1) ? '<span class="badge badge-success">Sim</span>' : '<span class="badge badge-danger">Não</span>' ?></td>
 									<td class="text-right">
 										<a title="Editar" href="<?php echo base_url('usuarios/edit/' . $user->id); ?>" class="btn btn-sm btn-primary">
 											<i class="fas fa-user-edit"></i>
 										</a>
-										<a title="Excluir" href="" class="btn btn-sm btn-danger">
+										<a title="Excluir" href="javascript(void)" data-toggle="modal" data-target="#user-<?= $user->id; ?>" class=" btn btn-sm btn-danger">
 											<i class="fas fa-user-times"></i>
 										</a>
 									</td>
 								</tr>
+
+								<div class="modal fade" id="user-<?= $user->id; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja excluir?</h5>
+												<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">×</span>
+												</button>
+											</div>
+											<div class="modal-body">Para exluir o usuário clique em <strong>"Sim"</strong></div>
+											<div class="modal-footer">
+												<button class="btn btn-secondary" type="button" data-dismiss="modal">Não</button>
+												<a class="btn btn-danger" href="<?= base_url("usuarios/del/" . $user->id) ?>">Sim</a>
+											</div>
+										</div>
+									</div>
+								</div>
 							<?php endforeach; ?>
 						</tbody>
 					</table>

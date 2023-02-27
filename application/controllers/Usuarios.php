@@ -24,6 +24,10 @@ class Usuarios extends CI_Controller
 			'usuarios' => $this->ion_auth->users()->result(),
 		);
 
+		// echo '<pre>';
+		// var_dump($data['usuarios']);
+		// die();
+
 		$this->load->view('layout/painel/header', $data);
 		$this->load->view('painel/usuarios/index');
 		$this->load->view('layout/painel/footer');
@@ -139,6 +143,27 @@ class Usuarios extends CI_Controller
 			$this->load->view('layout/painel/header', $data);
 			$this->load->view('painel/usuarios/add');
 			$this->load->view('layout/painel/footer');
+		}
+	}
+
+	public function del($user_id = NULL)
+	{
+		if (!$user_id || !$this->ion_auth->user($user_id)->row()) {
+			$this->session->set_flashdata('error', 'Usuário não encontrado');
+			redirect('usuarios');
+		}
+
+		if ($this->ion_auth->is_admin($user_id)) {
+			$this->session->set_flashdata('error', 'Ação não permitida, este usuário é um administrador');
+			redirect('usuarios');
+		}
+
+		if ($this->ion_auth->delete_user($user_id)) {
+			$this->session->set_flashdata('sucesso', 'Usuário excluído com sucesso');
+			redirect('usuarios');
+		} else {
+			$this->session->set_flashdata('error', 'Ação não permitida');
+			redirect('usuarios');
 		}
 	}
 
