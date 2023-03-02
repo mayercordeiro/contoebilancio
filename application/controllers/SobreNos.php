@@ -22,6 +22,7 @@ class SobreNos extends CI_Controller
 			'scripts' => array(
 				'js/website_header.js',
 			),
+			'utilitarios' => $this->Utilitarios_model->get_all('utilitarios'),
 		);
 
 		$this->load->view('layout/website/header', $data);

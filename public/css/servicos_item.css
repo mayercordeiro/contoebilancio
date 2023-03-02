@@ -1,0 +1,142 @@
+main {
+    position: relative;
+    top: 99px;
+}
+
+#bkg-pages {
+    position: absolute;
+    top: -84px;
+    right: 0;
+    z-index: -1;
+    opacity: 0.2;
+    max-width: 1920px;
+}
+
+.servicosItem {
+    max-width: 1292px;
+    margin: 80px auto 0 auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 16px;
+}
+
+.servicosItem h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #0B2239;
+    margin-bottom: 24px;
+}
+
+.servicosItem p {
+    font-size: 26px;
+    line-height: 44px;
+    color: #6C6C6C;
+    margin-bottom: 180px;
+}
+
+.servicosAside {
+    margin-bottom: 80px;
+}
+
+.servicosImg {
+    position: relative;
+}
+
+.servicosImg img {
+    width: 640px;
+    height: 427px;
+    z-index: 5;
+    position: relative;
+}
+
+#bkgImg {
+    width: 472px;
+    height: 600px;
+    background-color: #F0F0F0;
+    position: absolute;
+    top: -90px;
+    right: -140px;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#bkgImg h3 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #34BD6B;
+    padding: 16px 0 16px 16px;
+}
+
+#bkgImg ul {
+    padding: 16px 0 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+#bkgImg ul li {
+    display: flex;
+    align-items: center;
+    height: 42px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #0B2239;
+    transition: all 0.5s ease;
+}
+
+#bkgImg ul li:hover {
+    transform: translateX(10px);
+    transition: all 0.5s ease;
+}
+
+#bkgImg ul li svg {
+    margin-right: 16px;
+}
+
+@media screen and (max-width: 849px) {
+    #bkgImg {
+        width: 400px;
+        display: block;
+        position: relative;
+        top: 0px;
+        right: 0px;
+    }
+
+    .servicosItem p {
+        margin-bottom: 60px;
+    }
+
+    .servicosImg img {
+        margin-bottom: 40px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 549px) {
+    .servicosItem h1 {
+        font-size: 38px;
+    }
+
+    .servicosItem p {
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+    #bkgImg {
+        width: 100%;
+    }
+
+    #bkgImg h3 {
+        font-size: 38px;
+        font-weight: 700;
+        color: #34BD6B;
+        padding: 16px 0 16px 16px;
+    }
+}

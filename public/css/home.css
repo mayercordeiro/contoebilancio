@@ -3,6 +3,14 @@ main {
 	top: 99px;
 }
 
+#bkg-pages-home {
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0.2;
+	max-width: 1920px;
+}
+
 .mainContent {
 	height: 716px;
 	background-image: url('/codeigniter/public/img/bkg-home.jpg');
@@ -105,6 +113,7 @@ main {
 	padding-top: 80px;
 	border-bottom: 2px solid #edf2f6;
 	background-color: #f9f9f9;
+	position: relative;
 }
 
 .sobreNos {
@@ -225,8 +234,8 @@ main {
 }
 
 .sobreNosTexts>p {
-	font-size: 18px;
-	line-height: 28px;
+	font-size: 20px;
+	line-height: 30px;
 	text-align: justify;
 	text-justify: inter-word;
 	color: #555555;
@@ -412,6 +421,9 @@ main {
 /* Blog */
 .blog {
 	margin: 80px auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .blog h2 {
@@ -427,6 +439,7 @@ main {
 	color: #0B2239;
 	font-weight: 700;
 	max-width: 600px;
+	text-align: center;
 }
 
 .containerBlog {
