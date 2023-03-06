@@ -7,6 +7,8 @@ class Servicos extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+
+        $this->load->helper('button');
     }
 
     public function index()
@@ -94,6 +96,8 @@ class Servicos extends CI_Controller
         $this->load->view('layout/website/footer');
     }
 
+    protected $helpers = array('button');
+
     public function gestaorh()
     {
         $data = array(
@@ -113,5 +117,6 @@ class Servicos extends CI_Controller
         $this->load->view('layout/website/header', $data);
         $this->load->view('website/gestaorh');
         $this->load->view('layout/website/footer');
+        echo button('Teste');
     }
 }

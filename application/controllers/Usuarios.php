@@ -7,6 +7,10 @@ class Usuarios extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+
+		if (!$this->ion_auth->logged_in()) {
+			redirect('login/index');
+		}
 	}
 
 	public function index()
@@ -23,10 +27,6 @@ class Usuarios extends CI_Controller
 			),
 			'usuarios' => $this->ion_auth->users()->result(),
 		);
-
-		// echo '<pre>';
-		// var_dump($data['usuarios']);
-		// die();
 
 		$this->load->view('layout/painel/header', $data);
 		$this->load->view('painel/usuarios/index');

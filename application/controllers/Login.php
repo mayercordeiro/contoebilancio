@@ -26,12 +26,9 @@ class Login extends CI_Controller
         $remember = FALSE;
 
         if ($this->ion_auth->login($identity, $password, $remember)) {
-            redirect('login/auth');
-            echo '<pre>';
-            var_dump($this->ion_auth->login($identity, $password, $remember));
-            die();
+            redirect('painel');
         } else {
-            $this->session->set_flashdata('error', 'Verifique seu email e/ou senha');
+            $this->session->set_flashdata('error', 'Email e/ou senha incorreto(s)');
             redirect('login');
         }
     }
@@ -39,6 +36,6 @@ class Login extends CI_Controller
     public function logout()
     {
         $this->ion_auth->logout();
-        redirect('Login');
+        redirect('login');
     }
 }

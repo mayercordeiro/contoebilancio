@@ -25,8 +25,8 @@
                             <?php endif; ?>
 
                             <?php if ($message = $this->session->flashdata('error')) : ?>
-                                <div class="row">
-                                    <div class="col-md-12">
+                                <div class="">
+                                    <div class="col-md-12 mx-auto mt-3">
                                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                             <strong>
                                                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
@@ -43,7 +43,7 @@
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Seja Bem Vindo!</h1>
                                 </div>
-                                <form class="user" name="form_auth" method="POST" action="<?php base_url('login/auth') ?>">
+                                <form class="user" name="form_auth" method="POST" action="<?php echo base_url('login/auth') ?>">
                                     <div class="form-group">
                                         <input type="email" name="email" class="form-control form-control-user" placeholder="Email">
                                     </div>

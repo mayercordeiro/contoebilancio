@@ -6,9 +6,10 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('public/img/favicon.ico'); ?>">
 	<!-- Title -->
 	<?php echo (isset($titulo) ? '<title>' . $titulo . '</title>' : '<title>Conto & Bilancio</title>') ?>
-
 	<!-- Styles CSS -->
 	<?php if (isset($styles)) : ?>
 		<?php foreach ($styles as $style) : ?>
