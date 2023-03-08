@@ -31,7 +31,14 @@
 
 	<!-- Nav Item - Pages Collapse Menu -->
 	<li class="nav-item">
-		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+		<a class="nav-link" href="<?php echo base_url('/sistema'); ?>" title="Gerenciar Usuários">
+			<i class="fa fa-cog"></i>
+			<span>Sistema</span>
+		</a>
+	</li>
+
+	<li class="nav-item">
+		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" title="Gerenciar Usuários">
 			<i class="fa fa-users"></i>
 			<span>Usuários</span>
 		</a>

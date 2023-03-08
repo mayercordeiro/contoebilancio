@@ -5,3 +5,4 @@
 <p>Acreditamos que a contabilidade é uma ferramenta fundamental para o sucesso de qualquer negócio, seja ele de pequeno, médio ou grande porte. Por isso, estamos sempre dispostos a orientar nossos clientes em todas as questões contábeis, oferecendo suporte em cada etapa do processo.</p>
 <p>Nossa empresa é formada por uma equipe altamente capacitada e comprometida com a satisfação dos nossos clientes. Com uma abordagem personalizada e atendimento individualizado, trabalhamos em parceria com cada um dos nossos clientes, compreendendo suas necessidades específicas e oferecendo soluções personalizadas que visam o crescimento de seus negócios.</p>
 <p>Ao escolher a nossa empresa de contabilidade em Curitiba, você está optando por uma parceria sólida e duradoura, pautada pela confiança, transparência e excelência. Estamos prontos para ajudá-lo a alcançar seus objetivos financeiros e a crescer ainda mais em seu segmento de mercado.</p>
+<?= $botoes['botao_sobrenos'] ?>

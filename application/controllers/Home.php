@@ -23,7 +23,6 @@ class Home extends CI_Controller
 			'scripts' => array(
 				'js/website_header.js',
 			),
-			'utilitarios' => $this->Utilitarios_model->get_all('utilitarios'),
 		);
 
 

@@ -7,8 +7,6 @@ class Servicos extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-
-        $this->load->helper('button');
     }
 
     public function index()
@@ -25,7 +23,6 @@ class Servicos extends CI_Controller
             'scripts' => array(
                 'js/website_header.js',
             ),
-            'utilitarios' => $this->Utilitarios_model->get_all('utilitarios'),
         );
 
         $this->load->view('layout/website/header', $data);
@@ -46,7 +43,6 @@ class Servicos extends CI_Controller
             'scripts' => array(
                 'js/website_header.js',
             ),
-            'utilitarios' => $this->Utilitarios_model->get_all('utilitarios'),
         );
 
         $this->load->view('layout/website/header', $data);
@@ -67,7 +63,6 @@ class Servicos extends CI_Controller
             'scripts' => array(
                 'js/website_header.js',
             ),
-            'utilitarios' => $this->Utilitarios_model->get_all('utilitarios'),
         );
 
         $this->load->view('layout/website/header', $data);
@@ -88,15 +83,12 @@ class Servicos extends CI_Controller
             'scripts' => array(
                 'js/website_header.js',
             ),
-            'utilitarios' => $this->Utilitarios_model->get_all('utilitarios'),
         );
 
         $this->load->view('layout/website/header', $data);
         $this->load->view('website/societario');
         $this->load->view('layout/website/footer');
     }
-
-    protected $helpers = array('button');
 
     public function gestaorh()
     {
@@ -111,12 +103,10 @@ class Servicos extends CI_Controller
             'scripts' => array(
                 'js/website_header.js',
             ),
-            'utilitarios' => $this->Utilitarios_model->get_all('utilitarios'),
         );
 
         $this->load->view('layout/website/header', $data);
         $this->load->view('website/gestaorh');
         $this->load->view('layout/website/footer');
-        echo button('Teste');
     }
 }

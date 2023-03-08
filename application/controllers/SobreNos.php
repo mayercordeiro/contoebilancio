@@ -7,6 +7,8 @@ class SobreNos extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+
+		$this->load->helper('button');
 	}
 
 	public function index()
@@ -22,7 +24,9 @@ class SobreNos extends CI_Controller
 			'scripts' => array(
 				'js/website_header.js',
 			),
-			'utilitarios' => $this->Utilitarios_model->get_all('utilitarios'),
+			'botoes' => array(
+				'botao_sobrenos' => button('Explore Mais', '#linkExploreMais')
+			),
 		);
 
 		$this->load->view('layout/website/header', $data);

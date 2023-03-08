@@ -77,11 +77,11 @@
 						<span class="btnVertical"></span>
 					</div>
 					<ul class="submenuMobile">
-						<?php foreach ($utilitarios as $utilitario) : ?>
+						<!-- <?php foreach ($utilitarios as $utilitario) : ?>
 							<li>
 								<a href="<?= $utilitario->url ?>" target="_blank"><?= $utilitario->nome ?></a>
 							</li>
-						<?php endforeach; ?>
+						<?php endforeach; ?> -->
 					</ul>
 				</li>
 				<li class="expandMobile">
